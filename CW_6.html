@@ -11,16 +11,17 @@
     function Calculator() {
       this.num1 = 1;
       this.num2 = 1;
-      this.read = function () {
-        this.num1 = +prompt("Введите первое число");
-        this.num2 = +prompt("Введите второе число");
-      };
-      this.sum = function () {
-        return this.num1 + this.num2
-      };
-      this.mul = function () {
-        return this.num1 * this.num2
-      }
+    };
+    
+    Calculator.prototype.read = function () {
+      this.num1 = +prompt("Введите первое число");
+      this.num2 = +prompt("Введите второе число");
+    };
+    Calculator.prototype.sum = function () {
+      return this.num1 + this.num2
+    };
+    Calculator.prototype.mul = function () {
+      return this.num1 * this.num2
     };
 
     var calc = new Calculator();
